@@ -78,10 +78,13 @@ public class Account {
        return date;
    }
    public double getMonthlyInterestRate() {
-       return  (annualInterestRate/12.0);
+       return  ((annualInterestRate/12.0)/100);
 
    }
+ public double getMonthlyInterest() {
+       return (balance*getMonthlyInterestRate);
 
+   }
    public void withdraw(double amt) {
        if (amt <= balance) {
            balance -= amt;
@@ -100,7 +103,7 @@ public class Account {
    public void print() {
    System.out.println("\nAccount ID:" + id);
    System.out.println("Balance:" + balance);
-   System.out.println("Monthly Interest:" + getMonthlyInterestRate());
+   System.out.println("Monthly Interest:" + getMonthlyInterest());
    System.out.println("Date Created:" + date);
   
       
