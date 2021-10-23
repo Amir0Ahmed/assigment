@@ -1,32 +1,7 @@
 
 package account;
 
-/*
- uml diagram for account class
------------------------------------------------------------|    
-      account                                              |
------------------------------------------------------------|                                      
- -id:int                                                   | 
- -balnce:double                                            |
- -annualInterestRate:double                                |
- +date:Date                                                |
------------------------------------------------------------|                                       
- +Account()                                                |
- + Account( id:int,  initialBal:double)                    |
- +getId():int                                              |
- + setId(id:int ):void                                     |
- +getBalance():double                                      |
- + setBalance( balance:double):void                        |
- + getAnnualInterestRate():double                          |
- + setAnnualInterestRate( annualInterestRate:double) :void |
- + getdatecreated():Date                                   |
- + getMonthlyInterestRate():double                         | 
- + withdraw( amt:double):void                              |
- + deposit( amt:double):void                               |
- + print():void                                            |
------------------------------------------------------------|                                                           
 
-*/
     import java.util.Date;
 
 public class Account {
@@ -82,7 +57,7 @@ public class Account {
 
    }
  public double getMonthlyInterest() {
-       return (balance*getMonthlyInterestRate);
+       return (balance*getMonthlyInterestRate());
 
    }
    public void withdraw(double amt) {
